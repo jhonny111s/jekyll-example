@@ -1,0 +1,16 @@
+<!-- https://bulma.io/documentation/components/navbar/ -->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start">
+                {% for item in site.data.navigation %}
+                <div class="navbar-item">
+                    <a href="{{site.baseurl}}{{ item.link }}">
+                        {{ item.name }}
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</nav>
